@@ -1,0 +1,31 @@
+/* Style for the video to cover the whole page */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* Ensures the video covers the background */
+  z-index: 2; /* Puts the video behind other content */
+  background-color: #fff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling while video is playing */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.fade-out {
+  transition: opacity .5s ease-out, transform .5s ease-out;
+  opacity: 0; /* Make it invisible */
+  transform: scale(0.95);
+}
