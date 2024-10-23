@@ -1,5 +1,5 @@
 /* Style for the video to cover the whole page */
-#bg-video {
+.loader-content-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,6 +8,41 @@
   object-fit: contain; /* Ensures the video covers the background */
   z-index: 2; /* Puts the video behind other content */
   background-color: #fff;
+}
+
+.loader-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #edc165;
+}
+
+.sun-ray, .sun-face {
+  position: absolute;
+  width: 105px;
+  fill: #0B1313;
+}
+
+.sun-ray {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 10s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 10s;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 body, html {
@@ -24,8 +59,30 @@ body, html {
   padding: 20px;
 }
 
-.fade-out {
-  transition: opacity .5s ease-out, transform .5s ease-out;
-  opacity: 0; /* Make it invisible */
-  transform: scale(0.95);
+.move-up {
+  animation: moveUp 1s ease forwards;
+}
+
+
+/* animation */
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+@keyframes moveUp {
+  from {
+      transform: translateY(0); /* Initial position */
+  }
+  to {
+      transform: translateY(-100%); /* Move up by 100px */
+  }
 }
