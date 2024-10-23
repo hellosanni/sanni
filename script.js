@@ -1,6 +1,7 @@
 function handleSunRayAnimationEnd() {
   const loaderContent = document.getElementById("loader-content-container");
-  loaderContent.classList.add("move-up")
+  loaderContent.classList.add("move-up");
+  document.body.style.overflow = "auto"
 }
 
 setTimeout(() => {
