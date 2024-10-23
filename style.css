@@ -8,6 +8,7 @@
   object-fit: contain; /* Ensures the video covers the background */
   z-index: 2; /* Puts the video behind other content */
   background-color: #fff;
+  display: none;
 }
 
 .loader-content {
@@ -46,23 +47,65 @@
 }
 
 body, html {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;  
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden; /* Prevent scrolling while video is playing */
 }
 
-.content {
+.main-content {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 20px;
+  background-image: url(./assets/sanni-bg.png);
+  background-size:     cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.content {
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+.text-white {
+  color: #fff;
 }
 
 .move-up {
   animation: moveUp 1s ease forwards;
 }
 
+.sanni-logo {
+  width: 350px;
+}
 
 /* animation */
 @-moz-keyframes spin {
@@ -84,5 +127,15 @@ body, html {
   }
   to {
       transform: translateY(-100%); /* Move up by 100px */
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    background-image: url(./assets/sanni-bg-sm.png);
+    justify-content: start;
+  }
+  .text-content, .sanni-logo {
+    margin-top: 100px;
   }
 }
