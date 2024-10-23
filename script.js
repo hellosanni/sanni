@@ -3,6 +3,6 @@ function handleSunRayAnimationEnd() {
   loaderContent.classList.add("move-up")
 }
 
-// setTimeout(() => {
-//   handleSunRayAnimationEnd();
-// }, 3000)
+setTimeout(() => {
+  handleSunRayAnimationEnd();
+}, 3000)
