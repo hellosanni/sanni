@@ -8,7 +8,6 @@
   object-fit: contain; /* Ensures the video covers the background */
   z-index: 2; /* Puts the video behind other content */
   background-color: #fff;
-  display: none;
 }
 
 .loader-content {
