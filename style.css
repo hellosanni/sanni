@@ -63,9 +63,9 @@ body, html {
   background-repeat:   repeat;
   background-position: center center;
 
-  -moz-animation: pan 200s linear infinite;
-  -webkit-animation: pan 200s linear infinite;
-  animation: pan 200s linear infinite;
+  -moz-animation: pan 300s linear infinite;
+  -webkit-animation: pan 300s linear infinite;
+  animation: pan 300s linear infinite;
 
   height: 100%;
   width: auto;
