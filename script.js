@@ -4,6 +4,8 @@ function handleSunRayAnimationEnd() {
   document.body.style.overflow = "auto"
 }
 
-setTimeout(() => {
-  handleSunRayAnimationEnd();
-}, 3000)
+window.addEventListener('load', function(){
+  setTimeout(() => {
+    handleSunRayAnimationEnd();
+  }, 2500)
+});

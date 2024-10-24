@@ -58,10 +58,13 @@ body, html {
   position: relative;
   z-index: 1;
   text-align: center;
-  background-image: url("./assets/sanni-bg-long.png");
+  background-image: url("./assets/sanni-bg-long2.png");
   background-size:     cover;                     
   background-repeat:   repeat;
   background-position: center center;
+
+  -moz-animation: pan 200s linear infinite;
+  -webkit-animation: pan 200s linear infinite;
   animation: pan 200s linear infinite;
 
   height: 100%;
